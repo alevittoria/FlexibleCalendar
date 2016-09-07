@@ -43,6 +43,8 @@ public abstract class BaseCellView extends TextView {
     public static final int STATE_REGULAR = R.attr.state_date_regular;
     public static final int STATE_SELECTED = R.attr.state_date_selected;
     public static final int STATE_OUTSIDE_MONTH = R.attr.state_date_outside_month;
+    public static final int STATE_SPECIAL = R.attr.state_special;
+
 
     private Set<Integer> stateSet;
 

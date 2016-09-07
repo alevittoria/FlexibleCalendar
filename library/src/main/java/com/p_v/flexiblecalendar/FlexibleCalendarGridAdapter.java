@@ -159,6 +159,9 @@ class FlexibleCalendarGridAdapter extends BaseAdapter {
                 case BaseCellView.SELECTED:
                     cellView.addState(BaseCellView.STATE_SELECTED);
                     break;
+                case BaseCellView.SPECIAL:
+                    cellView.addState(BaseCellView.SPECIAL);
+                    break;
                 default:
                     cellView.addState(BaseCellView.STATE_REGULAR);
             }
