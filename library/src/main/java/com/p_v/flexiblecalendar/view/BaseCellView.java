@@ -24,8 +24,18 @@ public abstract class BaseCellView extends TextView {
     public static final int REGULAR = 3;
     public static final int SELECTED_TODAY = 4;
     public static final int OUTSIDE_MONTH = 5;
+    public static final int SPECIAL = 6;
+    private boolean isSpecial;
 
-    @IntDef({TODAY,SELECTED,REGULAR,SELECTED_TODAY,OUTSIDE_MONTH})
+    public boolean isSpecial() {
+        return isSpecial;
+    }
+
+    public void setSpecial(boolean special) {
+        isSpecial = special;
+    }
+
+    @IntDef({TODAY,SELECTED,REGULAR,SELECTED_TODAY,OUTSIDE_MONTH,SPECIAL})
     @Retention(RetentionPolicy.SOURCE)
     public @interface CellType{}
 

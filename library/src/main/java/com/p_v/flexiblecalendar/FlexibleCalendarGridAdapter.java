@@ -94,6 +94,11 @@ class FlexibleCalendarGridAdapter extends BaseAdapter {
         if(isWithinCurrentMonth){
             //set to REGULAR if is within current month
             cellType = BaseCellView.REGULAR;
+
+            if(convertView != null && convertView instanceof  BaseCellView){
+                if(((BaseCellView)convertView).isSpecial())
+                    cellType = BaseCellView.SPECIAL;
+            }
             if(disableAutoDateSelection){
                 if(userSelectedDateItem != null && userSelectedDateItem.getYear()==year
                         && userSelectedDateItem.getMonth()==month
